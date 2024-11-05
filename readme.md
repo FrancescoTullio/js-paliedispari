@@ -7,3 +7,14 @@ salvo il risultato dentro una variabile
 sommo i due valori e li salvo in una variabile
 controllo se è pari o dispari
 controllo se il giocatore ha vinto
+
+
+
+
+
+
+chiedo all'utente una parola
+salvo la parola
+inverto la parola tramite una funzione
+controllo se l'identita della nuova parola e quella di partenza sono identiche
+comunico il risultato
