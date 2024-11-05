@@ -19,7 +19,7 @@ if ((sceltaUtente === "pari") || (sceltaUtente === "dispari")) {
             const somma = numeroComputer + numeroUtenteParse;
             console.log("la somma è " + somma);
             const check = iseven(somma);
-            if(sceltaUtente === check){
+            if (sceltaUtente === check) {
                 console.log("hai vinto")
             } else {
                 console.log("hai perso")
@@ -36,15 +36,37 @@ if ((sceltaUtente === "pari") || (sceltaUtente === "dispari")) {
     console.log("ti avevo chiesto di scegliere tra pari o dispari ricarica la pagina e ricontrolla")
 }
 
-function randomizzatore (max, min){
-    const numeroTemporaneo = Math.floor(Math.random() * (max - min +1) + min);
+
+const parola = prompt("ora facciamo un altro gioco, dimmi una parola io ti diro se è palindroma, se si puo leggere anche al contrario. Mi raccomando niente maiuscole o potrei sbagliare :D")
+
+
+
+if(parola === reverse(parola)){
+    console.log("la parola è palindroma")
+} else {
+    console.log("la parola non è palindorma")
+}
+
+
+
+
+function randomizzatore(max, min) {
+    const numeroTemporaneo = Math.floor(Math.random() * (max - min + 1) + min);
     return numeroTemporaneo
 }
 
-function iseven (number){
-    const result = "dispari";
-    if(number % 2 === 0){
+function iseven(number) {
+    let result = "dispari";
+    if (number % 2 === 0) {
         result = "pari";
     }
     return result
+}
+
+function reverse(txt) {
+    let result = "";
+    for (let i = 0; i < txt.length; i++) {
+        let curLetter = txt[i];
+        result += curLetter;
+    }
 }
