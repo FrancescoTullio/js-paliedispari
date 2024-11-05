@@ -40,8 +40,9 @@ if ((sceltaUtente === "pari") || (sceltaUtente === "dispari")) {
 const parola = prompt("ora facciamo un altro gioco, dimmi una parola io ti diro se è palindroma, se si puo leggere anche al contrario. Mi raccomando niente maiuscole o potrei sbagliare :D")
 
 
-
-if(parola === reverse(parola)){
+const inverso = reverse(parola);
+console.log(inverso);
+if(parola === inverso){
     console.log("la parola è palindroma")
 } else {
     console.log("la parola non è palindorma")
@@ -65,7 +66,7 @@ function iseven(number) {
 
 function reverse(txt) {
     let result = "";
-    for (let i = 0; i < txt.length; i++) {
+    for (let i = txt.length -1; i >= 0; i--) {
         let curLetter = txt[i];
         result += curLetter;
     }
