@@ -69,4 +69,5 @@ function reverse(txt) {
         let curLetter = txt[i];
         result += curLetter;
     }
+    return result
 }
